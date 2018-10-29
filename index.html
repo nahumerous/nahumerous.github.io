@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="https://nahumerous.github.io">
   <title>烧一波鸡</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浙理工10级，现就职传化，后端Java开发一枚">
+  <meta name="description" content="浙理工10级，现就职某出行公司，后端Java开发一枚">
 <meta property="og:type" content="website">
 <meta property="og:title" content="烧一波鸡">
 <meta property="og:url" content="https://nahumerous.github.io/index.html">
 <meta property="og:site_name" content="烧一波鸡">
-<meta property="og:description" content="浙理工10级，现就职传化，后端Java开发一枚">
+<meta property="og:description" content="浙理工10级，现就职某出行公司，后端Java开发一枚">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="烧一波鸡">
-<meta name="twitter:description" content="浙理工10级，现就职传化，后端Java开发一枚">
+<meta name="twitter:description" content="浙理工10级，现就职某出行公司，后端Java开发一枚">
   
     <link rel="alternative" href="/atom.xml" title="烧一波鸡" type="application/atom+xml">
   
@@ -62,6 +62,8 @@
 				<li><a href="/tags/杂记/">杂记</a></li>
 	        
 				<li><a href="/tags/Java/">Java</a></li>
+	        
+				<li><a href="/tags/Linux/">Linux</a></li>
 	        
 			</ul>
 		</nav>
@@ -119,6 +121,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -135,11 +139,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/杂记/">杂记</a></li>
+					<li style="width: 25%"><a href="/tags/杂记/">杂记</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/Java/">Java</a></li>
+					<li style="width: 25%"><a href="/tags/Java/">Java</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/Linux/">Linux</a></li>
 		        
 				</ul>
 			</nav>
@@ -155,6 +161,97 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-ubuntu.源配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/29/ubuntu.源配置/">【Ubuntu】配置网易源、阿里源</a>
+    </h1>
+  
+
+        
+        <a href="/2018/10/29/ubuntu.源配置/" class="archive-article-date">
+  	<time datetime="2018-10-29T01:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先对原来的源文件做个备份</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv /etc/apt/source.list /etc/apt/source.list.bak</div></pre></td></tr></table></figure>
+<p>然后新建一个源文件添加网易源或阿里源或其他</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/apt/source.list</div></pre></td></tr></table></figure>
+<p><br>附上各个源：</p>
+<ul>
+<li>网易源</li>
+</ul>
+<p>附上网易镜像站点：<a href="http://mirrors.163.com/" target="_blank" rel="external">http://mirrors.163.com/</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse</div></pre></td></tr></table></figure>
+<ul>
+<li>阿里源</li>
+</ul>
+<p>附上阿里镜像站点：<a href="https://opsx.alibaba.com/mirror" target="_blank" rel="external">https://opsx.alibaba.com/mirror</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/29/ubuntu.源配置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-四重奏" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -327,7 +424,27 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">杂记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ubuntu - linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nahumerous.github.io/"/>
-  <updated>2017-10-25T06:22:21.000Z</updated>
+  <updated>2018-10-29T02:16:39.000Z</updated>
   <id>https://nahumerous.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【Ubuntu】配置网易源、阿里源</title>
+    <link href="https://nahumerous.github.io/2018/10/29/ubuntu.%E6%BA%90%E9%85%8D%E7%BD%AE/"/>
+    <id>https://nahumerous.github.io/2018/10/29/ubuntu.源配置/</id>
+    <published>2018-10-29T01:10:00.000Z</published>
+    <updated>2018-10-29T02:16:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先对原来的源文件做个备份</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mv /etc/apt/source.list /etc/apt/source.list.bak</div></pre></td></tr></table></figure><p>然后新建一个源文件添加网易源或阿里源或其他</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vi /etc/apt/source.list</div></pre></td></tr></table></figure><p><br>附上各个源：</p><ul><li>网易源</li></ul><p>附上网易镜像站点：<a href="http://mirrors.163.com/" target="_blank" rel="external">http://mirrors.163.com/</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">deb http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line">deb http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line">deb-src http://mirrors.163.com/ubuntu/ bionic-backports main restricted universe multiverse</div></pre></td></tr></table></figure><ul><li>阿里源</li></ul><p>附上阿里镜像站点：<a href="https://opsx.alibaba.com/mirror" target="_blank" rel="external">https://opsx.alibaba.com/mirror</a></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</div><div class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;首先对原来的源文件做个备份&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;p
+      
+    
+    </summary>
+    
+    
+      <category term="Ubuntu" scheme="https://nahumerous.github.io/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="https://nahumerous.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>【电视剧】欢乐到跺脚，哀伤到胃疼。——甜甜圈洞四重奏乐队</title>
